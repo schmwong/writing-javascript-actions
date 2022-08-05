@@ -1,0 +1,26 @@
+name: "my hello action"
+
+description: "say hello with GitHub Actions"
+
+# The placement of your inputs: is not strictly enforced,
+# however it has become commonplace to ensure the runs: statement
+# is defined after your inputs: and outputs: in your action.yml file.
+
+inputs:
+  first greeting:
+    description: "who would you like to greet in the console"
+    required: true
+    default: "Hubot"
+
+  second greeting:
+    description: "another person to greet"
+    required: true
+    default: "Mona the Octocat"
+
+  third greeting:
+    description: "a third greeting"
+    required: false
+
+runs:
+  using: "node12"
+  main: "main.js"
